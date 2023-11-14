@@ -10,6 +10,7 @@ async function loadData() {
     let number_of_weight = [];
     await d3.csv('hw1/piechart/data/HeightWeight.csv').then(
         function (res) {
+            //aaaa
             for (let i = 0; i < res.length; i++) {
                 var weight = parseFloat(res[i]["Weight(Pounds)"]) * 0.45359237
                 if (weight < 50) {

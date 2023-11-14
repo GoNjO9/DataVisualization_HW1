@@ -20,7 +20,8 @@ async function loadData() {
     let eu_arrivals_2019 = [];
     let region = [];
 
-    await d3.csv('hw1/barChart/data/Most_Visited_Destination_in_2018_and_2019.csv').then(
+    await d3.csv('hw1/barchart/data/Most_Visited_Destination_in_2018_and_2019.csv').then(
+        //aaaa
         function (res) {
             for (let i = 0; i < res.length; i++) {
                 destination.push(res[i]["Destination"]);
