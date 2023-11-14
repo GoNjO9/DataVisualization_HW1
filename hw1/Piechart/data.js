@@ -8,7 +8,7 @@ async function loadData() {
     let height_above_175 = [];
     let name = ["below 50kg", "50~60kg", "60~70kg", "above 70kg"]
     let number_of_weight = [];
-    await d3.csv('hw1/piechart/data/HeightWeight.csv').then(
+    await d3.csv('hw1/Piechart/data/HeightWeight.csv').then(
         function (res) {
             for (let i = 0; i < res.length; i++) {
                 var weight = parseFloat(res[i]["Weight(Pounds)"]) * 0.45359237
@@ -25,10 +25,10 @@ async function loadData() {
                     weight_above_70.push(res[i]['Height(Inches)']);
                 }
                 var height = parseFloat(res[i]["Height(Inches)"]) * 2.54
-                if (height < 165){
+                if (height < 165) {
                     height_below_165.push(res[i]['Weight(Pounds)']);
                 }
-                else if (height < 175){
+                else if (height < 175) {
                     height_below_175.push(res[i]['Weight(Pounds)']);
                 }
                 else {
